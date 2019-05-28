@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Organ/Blood Donation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="index_files/w3.css">
+<link rel="stylesheet" href="index_files/css.css">
+<script type= "text/javascript" src = "countries.js"></script>
+
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head><body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Blood and Organ<br>Donation</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="login_register.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Login / Register</a> 
+    <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About</a>  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Blood and Organ Donation</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+
+
+  <!-- Login -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Login</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <form action="/login.php" target="_blank">
+      <div class="w3-section">
+        <label>E-mail</label>
+        <input class="w3-input w3-border" name="Name" required="" type="text">
+      </div>
+      <div class="w3-section">
+        <label>Password</label>
+        <input class="w3-input w3-border" name="Email" required="" type="text">
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Login</button>
+    </form>  
+  </div>
+
+  <!-- signup-->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Register / Sign-Up</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <form action="/signupregister.php" target="_blank">
+      <div class="w3-section">
+        <label>E-mail</label>
+        <input class="w3-input w3-border" name="email" required="" type="text">
+      </div>
+      <div class="w3-section">
+        <label>Password</label>
+        <input class="w3-input w3-border" name="passwd" required="" type="password">
+      </div>
+       <div class="w3-section">
+        <label>Confirm Password</label>
+        <input class="w3-input w3-border" name="passwd1" required="" type="password">
+      </div>
+       <div class="w3-section">
+        <label>Full Name</label>
+        <input class="w3-input w3-border" name="name" required="" type="text">
+      </div>
+       <div class="w3-section">
+        <label>Gender</label>
+		<select class="w3-input w3-border" name ="gender">
+			<option>-- Select --</option>
+			<option>Male</option>
+			<option>Female</option>
+			<option>Other</option>
+		</select>
+	</div>
+       <div class="w3-section">
+        <label>Phone Number 1 <sub>(with country code)</sub></label>
+        <input class="w3-input w3-border" name="phno1" required="" type="text">
+      </div>
+       <div class="w3-section">
+        <label>Phone Number 2 <sub>(with country code)</label>
+        <input class="w3-input w3-border" name="phno2" required="" type="text">
+      </div>
+       <div class="w3-section">
+        <label>Address</label>
+		<textarea class="w3-input w3-border" name="address" required=""></textarea>
+      </div>
+       <div class="w3-section">
+        <label>Country</label><br>
+		<select class="w3-input w3-border" id="country" name ="country"></select>
+      </div>
+       <div class="w3-section">
+        <label>State</label>
+		<select name ="state" id ="state" class="w3-input w3-border" ></select>
+      </div>
+       <div class="w3-section">
+        <label>City</label>
+        <input class="w3-input w3-border" name="city" required="" type="text">
+      </div>
+       <div class="w3-section">
+        <label>pincode</label>
+        <input class="w3-input w3-border" name="pincode" required="" type="text">
+      </div>
+       <div class="w3-section">
+        <label>Date of Birth</label>
+        <input class="w3-input w3-border" name="dob" required="" type="date">
+      </div>
+       <div class="w3-section">
+        <label>Unique Identification</label>
+        <input class="w3-input w3-border" name="uid" required="" type="text">
+      </div>
+       <div class="w3-section">
+        <label>Designation</label>
+        <input class="w3-input w3-border" name="designation" required="" type="text">
+      </div>
+      <div class="w3-section">
+        <label>Policy Number</label>
+        <input class="w3-input w3-border" name="policyno" required="" type="textarea">
+      </div>
+      <div class="w3-section">
+        <label>Medical History</label>
+		<textarea class="w3-input w3-border" name="medicalhistory" required=""></textarea>
+      </div>
+      <div class="w3-section">
+        <label>Blood Group</label>
+		<select name="bloodgrp" class="w3-input w3-border" required="">
+			<option>-- Select --</option>
+			<option>O-</option>
+			<option>O+</option>
+			<option>A-</option>
+			<option>A+</option>
+			<option>B-</option>
+			<option>B+</option>
+			<option>AB-</option>
+			<option>AB+</option>
+		</select>
+       </div>
+<button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Sign-up / Register</button>
+    </form>  
+  </div>
+<script language="javascript">
+	populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+</script>
+
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">♥♥♥ Made by Akshay Jambagi ♥♥♥</a>
+<br>Just a template.
+</p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+
+</body></html>
